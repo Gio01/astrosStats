@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="static/styles.css" rel="stylesheet">
+    <link href="static/reset.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <h1>Astros Statictics</h1>
+    
+    <hr> 
+
+    <img src="static/astros_logo.svg" alt="">
+    <br>
+    <br>
+
+    <h2>Player Roster</h2>
+    <table> 
+
+      {%for player in roster%}
+             <tr>
+          <td>
+            <h3>{{player.firstName}} {{ player.lastName}}</h3> 
+          </td>
+
+          <td>
+        
+            <p>
+              Position {{player.position}} 
+            </p>
+            <p>
+              Number {{player.number}}
+            </p>
+          </td>
+        </tr>
+
+      {%endfor%}
+
+    </table>
+
+
+
+
+    <hr>
+
+    <h4>This is a fan made site to get some better understanding 
+      of the performance of all of the Astros players.
+    </h4>
+        
+  </body>
+</html>
