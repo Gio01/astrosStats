@@ -18,27 +18,44 @@
     <br>
 
     <h2>Player Roster</h2>
-    <table> 
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><h3>RBI</h3></td>
+      </tr>
+      <tr>
+        <td>
+          {%for player in roster%}
+          <h3>{{player.firstName}} {{ player.lastName}} {{player.position}}</h3> 
+          {%endfor%}
 
-      {%for player in roster%}
-             <tr>
+        </td>
+
           <td>
-            <h3>{{player.firstName}} {{ player.lastName}}</h3> 
+            
+            {%for player in roster%}
+
+              <p>
+                {{player.number}}
+              </p>
+
+            {%endfor%}
+            <br>
+
           </td>
 
+
           <td>
-        
-            <p>
-              Position {{player.position}} 
-            </p>
-            <p>
-              Number {{player.number}}
-            </p>
+          
+            {%for player in roster%}
+
+              <p>22</p>
+
+            {%endfor%}
+
           </td>
         </tr>
-
-      {%endfor%}
-
     </table>
 
 
