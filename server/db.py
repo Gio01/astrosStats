@@ -151,9 +151,67 @@ def add_data_to_table(player_info):
 
         
 
+###############
+# Create a table with the User stats!
+###############
+from dao import DAO
+
+
+def get_astros_player_stats():
+
+    players = DAO()
+
+    player_list = players.get_db_data()
+
+    for player in player_list:
+
+        player_stat = statsapi.player_stat_data(player[1], group="[fielding]", type="season")
+        print('Player info for: ', player_stat.get('first_name'), '\n')
+        print(player_stat.get('stats'), '\n')
+        print(player_stat.keys())
+        print(player_stat.get('stats')[0].get('stats').keys())
+
+    
+    return 'Hello' 
+
+
+def create_player_stat_table():
+    sql_statement = [
+            """
+            CREATE TABLE IF NOT EXISTS players (
+                id INTEGER PRIMARY KEY,
+                playerId TEXT NOT NULL,
+                firstName TEXT NOT NULL,
+                lastName TEXT NOT NULL,
+                active BOOL NOT NULL,
+                current_team TEXT NOT NULL,
+                position TEXT NOT NULL,
+                nickName TEXT,
+                lastPlayed TEXT,
+                mlbDebut TEXT NOT NULL,
+                bat_side TEXT NOT NULL, 
+                pitchHand TEXT NOT NULL,
+                ;
+            """
+            ]
+    
+    try: 
+        with sqlite3.connect('mlb.db') as conn:
+            cursor = conn.cursor()
+
+            for statement in sql_statement:
+                cursor.execute(statement)
+
+            conn.commit()
+
+    except sqlite3.Error as e:
+        print(e)
+
+
+
 
 if __name__ == '__main__':
-    # create_player_table()
-    # player_info = get_astros_players()
-    # add_data_to_table(player_info)
-    pass
+    #create_player_table()
+    #player_info = get_astros_players()
+    #add_data_to_table(player_info)
+    print(get_astros_player_stats())

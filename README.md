@@ -14,3 +14,8 @@ of players.
 However at the very least by having my own basic table i do not need to keep on making so many api 
 calls get the data that i want as that will create a lot of overhang and cause for latency issues 
 when trying to access the page!
+
+
+------
+References:
+- I used Kodestan's css for the visual aesthetic of the site: https://kodestan.com/ 
