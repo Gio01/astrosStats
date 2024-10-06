@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
     <title></title>
-    <link href="static/styles.css" rel="stylesheet">
+    
     <link href="static/reset.css" rel="stylesheet" />
+    <link href="static/styles.css" rel="stylesheet">
   </head>
   <body>
     
-    <h1>Astros Statictics</h1>
+    <h1>Astros Statistics</h1>
     
     <hr> 
 
@@ -20,16 +21,16 @@
     <h2>Player Roster</h2>
     <table>
       <tr>
-        <td><h3>Astros Hitting</h3></td>
-        <td>Position</td>
-        <td><h3>AB</h3></td>
-        <td><h3>R</h3></td>
-        <td><h3>H</h3></td>
-        <td><h3>RBI</h3></td>
-        <td><h3>HR</h3></td>
-        <td><h3>BB</h3></td>
-        <td><h3>K</h3></td>
-        <td><h3>AVG</h3></td>
+        <td>Astros Hitting</td>
+        <td>Pos</td>
+        <td>AB</td>
+        <td>R</td>
+        <td>H</td>
+        <td>RBI</td>
+        <td>HR</td>
+        <td>BB</td>
+        <td>K</td>
+        <td>AVG</td>
       </tr>
       <tr>
         <td>
@@ -105,87 +106,78 @@
     <table>
       <h3>Astros 2024 Season</h3>
       <tr>
-        <td><h3>Astros Pitchers</h3></td>
-        <td>Position</td>
-        <td><h3>IP</h3></td>
-        <td><h3>H</h3></td>
-        <td><h3>R</h3></td>
-        <td><h3>ER</h3></td>
-        <td><h3>BB</h3></td>
-        <td><h3>HR</h3></td>
-        <td><h3>K</h3></td>
-        <td><h3>ERA</h3></td>
+        <td>Astros Pitchers</td>
+        <td>Pos</td>
+        <td>IP</td>
+        <td>H</td>
+        <td>R</td>
+        <td>ER</td>
+        <td>BB</td>
+        <td>HR</td>
+        <td>K</td>
+        <td>ERA</td>
       </tr>
       <tr>
+
         <td>
           {%for p in number%}
           <h3>{{p[2]}} #{{p[5]}}</h3> 
-
           {%endfor%}
-
         </td>
 
-        <td>
+         <td>
           {%for pitcher in pitchers%}
-            <h3>{{pitcher[5]}}</h3>
+            <h3>{{pitcher[5]}} </h3>
           {%endfor%}
-          <br>
         </td>
 
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[31]}}</h3>
           {%endfor%}
-          <br>
         </td>
 
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[18]}}</h3>
-          {%endfor%}
-          <br>
+          {%endfor%}     
         </td>
 
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[11]}}</h3>
           {%endfor%}
-          <br>
         </td>
+
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[38]}}</h3>
           {%endfor%}
-          <br>
         </td>
 
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[16]}}</h3>
           {%endfor%}
-          <br>
         </td>
 
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[14]}}</h3>
           {%endfor%}
-          <br>
         </td>
         
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[15]}}</h3>
           {%endfor%}
-          <br>
         </td>
 
         <td>
           {%for pitcher in pitchers%}
             <h3>{{pitcher[38]}}</h3>
           {%endfor%}
-          <br>
-        </td>
+         </td>
 
       </tr>
     </table>

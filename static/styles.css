@@ -63,13 +63,14 @@ body {
 
 @media screen and (max-width: 480px) {
 	:root {
-		font-size: 14px;
+		font-size: .6rem;
 	}
 
 	body {
 		padding: var(--line-height) 1ch;
 	}
 }
+
 
 h1,
 h2,
@@ -151,6 +152,7 @@ table {
 	width: calc(round(down, 100%, 1ch));
 	border-collapse: collapse;
 	margin: 0 0 calc(var(--line-height) * 2);
+	
 }
 
 th,
