@@ -1,4 +1,8 @@
-TODO:
+### About
+A fan made site to look at the astros stats during the current season.
+
+
+### Next ToDos
 have the home page be the current stats.
 
 each player will have a link that will take them to each players own page 
@@ -6,6 +10,7 @@ which would then give us more info, with some graphs to show their stats over ti
 
 
 ------
+### Bugs
 Each time i was making a refresh i was making api calls which was going to take forever 
 so instead i have created a simple sqlite table that holds the roster of players from the 
 astros and then based on that I can then at least get rid of the roster call to get the list 
@@ -17,5 +22,5 @@ when trying to access the page!
 
 
 ------
-References:
+### References:
 - I used Kodestan's css for the visual aesthetic of the site: https://kodestan.com/ 
