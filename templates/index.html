@@ -20,46 +20,175 @@
     <h2>Player Roster</h2>
     <table>
       <tr>
-        <td><h3>Players</h3></td>
-        <td></td>
+        <td><h3>Astros Hitting</h3></td>
+        <td>Position</td>
+        <td><h3>AB</h3></td>
+        <td><h3>R</h3></td>
+        <td><h3>H</h3></td>
         <td><h3>RBI</h3></td>
+        <td><h3>HR</h3></td>
+        <td><h3>BB</h3></td>
+        <td><h3>K</h3></td>
+        <td><h3>AVG</h3></td>
       </tr>
       <tr>
         <td>
-          {%for player in roster%}
-          <h3>{{player[2]}} #{{player[5]}}</h3> 
+          {%for p in roster%}
+          <h3>{{p[2]}} #{{p[5]}}</h3> 
           {%endfor%}
 
         </td>
 
-          <td>
-            
-            {%for player in roster%}
-
-              <h3>
-                {{player[7]}}
-              </h3>
-
-            {%endfor%}
-            <br>
-
-          </td>
+        <td>
+          {%for hitter in hitters%}
+            <h3>
+              {{hitter[5]}}
+            </h3>
+          {%endfor%}
+        </td>
 
 
-          <td>
-          
-            {%for player in roster%}
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[20]}}</h3>
+          {%endfor%}
+        </td>
+        
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[10]}}</h3>
+          {%endfor%}
+        </td>
 
-              <h3>22</h3>
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[17]}}</h3>
+          {%endfor%}
+        </td>
 
-            {%endfor%}
-
-          </td>
-        </tr>
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[31]}}</h3>
+          {%endfor%}
+        </td>
+        
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[13]}}</h3>
+          {%endfor%}
+        </td>
+        
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[15]}}</h3>
+          {%endfor%}
+        </td>
+        
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[14]}}</h3>
+          {%endfor%}
+        </td>
+        
+        <td>
+          {%for hitter in hitters%}
+            <h3>{{hitter[19]}}</h3>
+          {%endfor%}
+        </td>
+      </tr>
     </table>
 
+    <hr>
 
+    <!--Pitchers Table-->
 
+    <table>
+      <h3>Astros 2024 Season</h3>
+      <tr>
+        <td><h3>Astros Pitchers</h3></td>
+        <td>Position</td>
+        <td><h3>IP</h3></td>
+        <td><h3>H</h3></td>
+        <td><h3>R</h3></td>
+        <td><h3>ER</h3></td>
+        <td><h3>BB</h3></td>
+        <td><h3>HR</h3></td>
+        <td><h3>K</h3></td>
+        <td><h3>ERA</h3></td>
+      </tr>
+      <tr>
+        <td>
+          {%for p in number%}
+          <h3>{{p[2]}} #{{p[5]}}</h3> 
+
+          {%endfor%}
+
+        </td>
+
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[5]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[31]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[18]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[11]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[38]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[16]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[14]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+        
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[15]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+
+        <td>
+          {%for pitcher in pitchers%}
+            <h3>{{pitcher[38]}}</h3>
+          {%endfor%}
+          <br>
+        </td>
+
+      </tr>
+    </table>
 
     <hr>
 

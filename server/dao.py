@@ -21,7 +21,29 @@ class DAO:
         rows = cur.fetchall()
         conn.close()
 
-        for row in rows:
-           print(row)
+        #for row in rows:
+        #   print(row)
         return rows
 
+    def get_pitcher_stats(self):
+
+        conn = sqlite3.connect('mlb.db')
+        cur = conn.cursor()
+
+        cur.execute('SELECT * FROM pitcher_stats;')
+        rows = cur.fetchall()
+        conn.close()
+
+        return rows
+
+    def get_hitting_stats(self):
+
+        conn = sqlite3.connect('mlb.db')
+        cur = conn.cursor()
+
+        cur.execute('SELECT * FROM hitting_stats;')
+        rows = cur.fetchall()
+
+        conn.close()
+
+        return rows
